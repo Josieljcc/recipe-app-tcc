@@ -1,6 +1,6 @@
-import Button from "@/components/Button";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { Link } from "expo-router";
 import { Text, Image, View, TouchableOpacity } from "react-native";
 
 export default function IndexScreen() {
@@ -21,12 +21,11 @@ export default function IndexScreen() {
         <ThemedText className="text-zinc-50 mb-8 text-base">
           Find best recipes
         </ThemedText>
-        <TouchableOpacity
-          onPress={() => console.log("pressed")}
-          className="bg-red-500 rounded-md w-[90%] mb-8 py-2 flex items-center justify-center"
-        >
-          <Text className="text-zinc-50 text-base ">Start Cooking ➤</Text>
-        </TouchableOpacity>
+        <Link href="/login" asChild>
+          <TouchableOpacity className="bg-red-500 rounded-md w-[90%] mb-8 py-2 flex items-center justify-center">
+            <Text className="text-zinc-50 text-base ">Start Cooking ➤</Text>
+          </TouchableOpacity>
+        </Link>
       </View>
     </ThemedView>
   );
