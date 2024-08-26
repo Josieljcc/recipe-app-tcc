@@ -8,6 +8,6 @@ export const registerSchema = z.object({
   email: z.string().email().min(1).toLowerCase(),
   password: z
     .string()
-    .min(6, "The password must have at least 6 characters")
+    .min(8, "The password must have at least 6 characters")
     .min(1),
 });

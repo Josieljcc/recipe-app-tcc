@@ -13,8 +13,11 @@ export default function Header({
   handleSearch,
 }: Props) {
   return (
-    <View className="bg-zinc-800 absolute top-0 left-0 right-0 z-10 p-12 rounded-b-3xl">
-      <View style={{ position: "relative", justifyContent: "center" }}>
+    <View className="bg-zinc-800 absolute top-0 left-0 right-0 z-10 p-10 rounded-b-3xl">
+      <View
+        className="mt-4"
+        style={{ position: "relative", justifyContent: "center" }}
+      >
         <TextInput
           value={searchText}
           onChangeText={setSearchText}

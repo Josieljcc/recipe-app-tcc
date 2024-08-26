@@ -22,6 +22,8 @@ function useFavorites() {
 
   const addFavorite = async (id: number) => {
     if (!user) {
+      console.log("user not found");
+
       return;
     }
     await postFavorite(user.token, id);

@@ -14,6 +14,8 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
 
   const inicializeUser = async () => {
     const user = await SecureStore.getItemAsync("user");
+    console.log(user);
+
     if (user) {
       setUser(JSON.parse(user));
     }
